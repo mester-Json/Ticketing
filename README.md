@@ -5,7 +5,7 @@
 
 # jour 1 :
 creation de la home page est ajout du css 
-#probléme rencontrer c'etait de le rendre responsive donc j'ai utiliser une extension chrome qui s'appelle responsive veiwier voici ci de sous le lien  est second pronbléme rencotrer était de terouver une image qui ne pixéliser pas sur la page donc j'ai aussi utiliser un site pour crés c'est prope svg le lien ci de sous 
+probléme rencontrer c'etait de le rendre responsive donc j'ai utiliser une extension chrome qui s'appelle responsive veiwier voici ci de sous le lien  est second pronbléme rencotrer était de terouver une image qui ne pixéliser pas sur la page donc j'ai aussi utiliser un site pour crés c'est prope svg le lien ci de sous 
 # https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb
 # https://www.svgbackgrounds.com/
 
