@@ -1,40 +1,38 @@
 <?php
-// Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Remplace ces valeurs par les informations de ta base de données
-    $serveur = "localhost";
-    $utilisateur = "root";
-    $motDePasse = "157326";
-    $baseDeDonnees = "ticketing";
+    define('HOST', 'localhost');
+    define('DB_Name', '');
+    define('USER', '');
+    define('PASS', '');
 
-    // Se connecter à la base de données
-    $connexion = new mysqli($serveur, $utilisateur, $motDePasse, $baseDeDonnees);
+    try {
+        $db = new PDO("mysql:host=" . HOST . ";dbname=" . DB_Name, USER, PASS);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Vérifier la connexion
-    if ($connexion->connect_error) {
-        die("La connexion a échoué : " . $connexion->connect_error);
+        // Récupérer les données du formulaire
+        $user = $_POST["User"];
+        $mail = $_POST["Mail"]; // Correction : "Mail" au lieu de "mail"
+        $password = $_POST["Password"];
+
+        // Éviter les injections SQL en utilisant des requêtes préparées
+        $requete = $db->prepare("SELECT id FROM user WHERE user = ? AND mail = ? AND password = ?"); // Correction : "AND" pour chaque condition
+        $requete->bindParam(1, $user);
+        $requete->bindParam(2, $mail);
+        $requete->bindParam(3, $password); // Correction : 3 au lieu de 2
+
+        // Exécuter la requête
+        $requete->execute();
+
+        // Vérifier si l'utilisateur existe
+        if ($requete->fetch()) {
+            echo "Connexion réussie. Bienvenue, utilisateur $user!";
+            // Tu peux rediriger l'utilisateur vers une page de succès ici
+        } else {
+            echo "Nom d'utilisateur ou mot de passe incorrect.";
+        }
+    } catch (PDOException $e){
+        die("Erreur de connexion à la base de données : " . $e->getMessage());
     }
-
-    // Récupérer les données du formulaire
-    $user = $_POST["User"];
-    $mail = $_POST["Mail"];
-    $paswword = $_POST["Password"];
-
-    // Éviter les injections SQL en utilisant des requêtes préparées
-    $requete = $connexion->prepare("Insert INTO user(user, mail, password) VALUES (?, ?, ?)");
-    $requete->bind_param("ss", $user, $mail, $password);
-
-    // Exécuter la requête
-    $requete->execute();
-    // Vérifier si l'utilisateur existe
-    if ($requete->fetch()) {
-        echo "Connexion réussie. Bienvenue, utilisateur $userId!";
-        // Tu peux rediriger l'utilisateur vers une page de succès ici
-    } else {
-        echo "Nom d'utilisateur ou mot de passe incorrect.";
-    }
-
-    // Fermer la requête et la connexion
-    $requete->close();
-    $connexion->close();
 }
+?>
