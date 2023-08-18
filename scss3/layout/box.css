@@ -1,0 +1,36 @@
+.box {
+  background-color: white;
+  opacity: 50%;
+  border-radius: 90px;
+  margin-top: 50px;
+  margin-left: 450px;
+  width: 1580px;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+}
+
+.box2 {
+  background-color: white;
+  opacity: 50%;
+  border-radius: 90px;
+  margin-top: 50px;
+  margin-left: 450px;
+  width: 1580px;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+}
+
+.box3 {
+  background-color: white;
+  opacity: 50%;
+  border-radius: 90px;
+  margin-top: 50px;
+  margin-left: 450px;
+  margin-bottom: 50px;
+  width: 1580px;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+}/*# sourceMappingURL=box.css.map */

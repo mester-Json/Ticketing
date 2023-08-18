@@ -1,0 +1,79 @@
+.box {
+    background-color: white;
+    opacity: 50%;
+    border-radius: 90px;
+    margin-top: 50px;
+    margin-left: 750px;
+    margin-bottom: 50px;
+    width: 1000px;
+    height: 850px;
+    display: block;
+}
+
+.box_user {
+    background-color: white;
+    margin-top: 80px;
+    margin-left: 290px;
+    width: 450px;
+    height: 100px;
+    border-radius: 90px;
+    font-size: 35px;
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
+
+.box_user::placeholder {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 40px;
+}
+
+.box_mail {
+    background-color: white;
+    margin-top: 80px;
+    margin-left: 290px;
+    width: 450px;
+    height: 100px;
+    border-radius: 90px;
+    font-size: 35px;
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
+
+.box_mail::placeholder {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 40px;
+}
+
+.box_password {
+    background-color: rgb(255, 255, 255);
+    margin-top: 80px;
+    margin-left: 290px;
+    width: 450px;
+    height: 100px;
+    border-radius: 90px;
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    display: inline-block;
+}
+
+.box_password::placeholder {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 40px;
+}
+
+.Bouton_connexion {
+    background-color: rgb(255, 255, 255);
+    margin-top: 35px;
+    margin-left: 650px;
+    width: 200px;
+    height: 80px;
+    border-radius: 90px;
+    font-size: 40px;
+    display: inline-block;
+}

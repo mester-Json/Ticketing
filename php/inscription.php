@@ -27,6 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Exécuter la requête
             if ($requete->execute()) {
+                header("Location: ../index.html");
+                exit;
                 echo "Inscription réussie. Vous pouvez maintenant vous connecter.";
                 // Tu peux rediriger l'utilisateur vers une page de connexion ici
             } else {
