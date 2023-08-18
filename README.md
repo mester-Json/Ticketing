@@ -16,4 +16,5 @@ probéme rencontrer c'etait de rendre la page de connexion fonctionelle maos pas
 # jour 3 : 
 création des fichier php est conexion a la bdd le config . php serre asavoir si tout t'es bien conecter le connexions serre a savoir si mon fomulaire de connexion marche est pareil pour l'inscription j'ai eu quand me beaucoup de mal les rendre fonctionel mais aujourdh'ui il son fontionel a 90% rest mtn affaire les tickeyt j'ai regarder beaucoup d'astuce sur innternet mais je pourrais pas mettre toute mest souce 
 
-
+# jour 4 :
+j'ai ajouter un nouveau fichier js qui rend les icons clicable est j'ai ajouter sass est reorganiser tout les fichier j'ai pas fait beaucoup mais beaucoup de reorganisation de fichier 
