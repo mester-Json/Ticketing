@@ -1,5 +1,5 @@
 <?php
-    define('HOST', 'localhost');
+    define('HOST', '');
     define('DB_Name', '');
     define('USER', '');
     define('PASS', '');
@@ -11,5 +11,5 @@
     }catch(PDOException $e){
         echo $e;
     }
-
+ 
 ?>

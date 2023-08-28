@@ -15,6 +15,13 @@ h1 {
   display: flex;
 }
 
+.fa-user {
+  color: rgb(255, 255, 255);
+  padding: 50px;
+  margin-left: 700px;
+  font-size: 50px;
+}
+
 footer {
   width: auto;
   height: 150px;
@@ -32,7 +39,7 @@ footer {
 }
 
 .fa-1x {
-  color: black;
+  color: rgb(0, 0, 0);
   font-size: 50px;
   margin-top: 40px;
   margin-left: 1250px;
@@ -141,7 +148,7 @@ body {
   opacity: 50%;
   border-radius: 90px;
   margin-top: 50px;
-  margin-left: 450px;
+  margin-left: 200px;
   width: 1580px;
   height: 500px;
   display: flex;
@@ -153,7 +160,7 @@ body {
   opacity: 50%;
   border-radius: 90px;
   margin-top: 50px;
-  margin-left: 450px;
+  margin-left: 200px;
   width: 1580px;
   height: 500px;
   display: flex;
@@ -165,8 +172,8 @@ body {
   opacity: 50%;
   border-radius: 90px;
   margin-top: 50px;
-  margin-left: 450px;
-  margin-bottom: 50px;
+  margin-left: 200px;
+  margin-bottom: 150px;
   width: 1580px;
   height: 500px;
   display: flex;

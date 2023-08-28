@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss5/main.css">
+    <title>Document</title>
+</head>
+
+
+<nav>
+    <h1> Ticketing </h1>
+</nav>
+
+<div class="Box">
+    <p> user :<span>
+            <?php echo $user; ?>
+        </span></p>
+    <p> mail : <span>
+            <?php echo hideEmail($mail); ?>
+        </span></p>
+    <p> time : <span>
+            <?php echo $Time; ?> heures
+        </span></p>
+
+    <form method="post" action="./php/user.php">
+
+        <input type="text" id="newuser" class="newuser" name="newuser" placeholder="New User">
+
+        <input type="password" id="newpassword" class="newpassword" name="newpassword" placeholder="New Password">
+
+        <input type="mail" id="newmail" name="newmail" class="newmail" placeholder="New Mail">
+
+        <input type="submit" class="Bouton_modifier" value="Modifier">
+    </form>
+</div>
+</body>
+<footer>
+    <a class="Copy">
+        <p>Jayson-Decubber-2023</p>
+    </a>
+</footer>
+
+</html>

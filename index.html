@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./scss1/main.css">
-    <link rel="stylesheet" href="erro.css">
     <title>Connexion</title>
 </head>
 
@@ -14,32 +13,34 @@
         <h1> Ticketing </h1>
     </nav>
 
-    <form method="post" action=""  id="contactForm"  class="box" >
+    <form method="post" action="./php/connexion.php" id="contactForm" class="box">
         <div>
-            <input class="box_user" value="User" name="User" id="User" type="text" placeholder="User">
-            <label class="Error_User" for="User" id="UserError">Veuiller renseigner un nom valide
+            <input class="box_user"  name="User" id="User" type="text" placeholder="User">
+            <label class="Error_User" for="User" id="UserError"> </label>
+        </div>
+        <div>
+            <input class="box_mail"  name="Mail" id="Mail" type="text" placeholder="Mail">
+            <label class="Error_Mail" for="Mail" id="MailError">
             </label>
         </div>
         <div>
-            <input class="box_mail" value="Mail" name="Mail" id="Mail" type="text" placeholder="Mail">
-            <label class="Error_Mail" for="Mail" id="MailError">Veuiller renseigner un mail valide
+            <input class="box_password" name="Password" id="Password" type="text" placeholder="Password">
+            <label class="Error_Password" value="Password" for="Password" id="PasswordError">
             </label>
         </div>
         <div>
-            <input class="box_password" value="Password" name="Password" id="Password" type="text" placeholder="Password">
-            <label class="Error_Password" for="Password" id="PasswordError">Veuiller renseigner un mot de passe valide
-            </label>
+            <input type="submit" name="" class="Bouton_connexion " value="submit">
         </div>
-        <div>
-            <input type="submit" name="" class="Bouton_connexion " value="">
-        </div>
+        <a class="new_compte" href="http://localhost/Ticketing/inscription.html">
+            <p> Crée un compte </p>
+        </a>
     </form>
 </body>
 
 <footer>
     <a class="Copy">
-        <p>Jayson-Decuuber-2023</p>
+        <p>Jayson-Decubber-2023</p>
     </a>
 </footer>
-    <script src="./conexion.js"> </script>
+
 </html>

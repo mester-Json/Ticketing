@@ -70,3 +70,4 @@ clickableIcons9.forEach(icon => {
         icon.classList.toggle("clicked3");
     });
 });
+

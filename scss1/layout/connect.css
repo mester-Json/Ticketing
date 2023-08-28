@@ -3,19 +3,19 @@
   opacity: 50%;
   border-radius: 90px;
   margin-top: 50px;
-  margin-left: 750px;
+  margin-left: 650px;
   margin-bottom: 50px;
-  width: 1000px;
-  height: 850px;
+  width: 750px;
+  height: 560px;
   display: block;
 }
 
 .box_user {
   background-color: white;
-  margin-top: 80px;
-  margin-left: 290px;
-  width: 450px;
-  height: 100px;
+  margin-top: 50px;
+  margin-left: 220px;
+  width: 250px;
+  height: 50px;
   border-radius: 90px;
   font-size: 35px;
   color: black;
@@ -26,21 +26,21 @@
 .box_user::-moz-placeholder {
   color: rgb(0, 0, 0);
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 .box_user::placeholder {
   color: rgb(0, 0, 0);
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 .box_mail {
   background-color: white;
-  margin-top: 80px;
-  margin-left: 290px;
-  width: 450px;
-  height: 100px;
+  margin-top: 50px;
+  margin-left: 220px;
+  width: 250px;
+  height: 50px;
   border-radius: 90px;
   font-size: 35px;
   color: black;
@@ -51,21 +51,21 @@
 .box_mail::-moz-placeholder {
   color: rgb(0, 0, 0);
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 .box_mail::placeholder {
   color: rgb(0, 0, 0);
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 .box_password {
   background-color: rgb(255, 255, 255);
-  margin-top: 80px;
-  margin-left: 290px;
-  width: 450px;
-  height: 100px;
+  margin-top: 50px;
+  margin-left: 220px;
+  width: 250px;
+  height: 50px;
   border-radius: 90px;
   font-size: 35px;
   color: rgb(0, 0, 0);
@@ -76,22 +76,30 @@
 .box_password::-moz-placeholder {
   color: rgb(0, 0, 0);
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 .box_password::placeholder {
   color: rgb(0, 0, 0);
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
+}
+
+.new_compte {
+  color: black;
+  margin-left: 50px;
+  font-size: 15px;
+  block-size: 0;
+  display: flex;
 }
 
 .Bouton_connexion {
   background-color: rgb(255, 255, 255);
-  margin-top: 35px;
-  margin-left: 650px;
-  width: 200px;
-  height: 80px;
+  margin-top: 25px;
+  margin-left: 550px;
+  width: 150px;
+  height: 50px;
   border-radius: 90px;
-  font-size: 40px;
+  font-size: 20px;
   display: inline-block;
-}/*# sourceMappingURL=connexion.css.map */
+}/*# sourceMappingURL=connect.css.map */

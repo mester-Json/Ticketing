@@ -3,19 +3,19 @@
     opacity: 50%;
     border-radius: 90px;
     margin-top: 50px;
-    margin-left: 750px;
+    margin-left: 550px;
     margin-bottom: 50px;
-    width: 1000px;
-    height: 850px;
+    width: 900px;
+    height: 563px;
     display: block;
 }
 
 .box_user {
     background-color: white;
-    margin-top: 70px;
-    margin-left: 290px;
-    width: 450px;
-    height: 100px;
+    margin-top: 40px;
+    margin-left: 300px;
+    width: 250px;
+    height:70px;
     border-radius: 90px;
     font-size: 35px;
     color: black;
@@ -26,15 +26,15 @@
 .box_user::placeholder {
     color: rgb(0, 0, 0);
     text-align: center;
-    font-size: 40px;
+    font-size: 25px;
 }
 
 .box_mail {
     background-color: white;
-    margin-top: 70px;
-    margin-left: 290px;
-    width: 450px;
-    height: 100px;
+    margin-top: 40px;
+    margin-left: 300px;
+    width: 250px;
+    height: 70px;
     border-radius: 90px;
     font-size: 35px;
     color: black;
@@ -45,15 +45,15 @@
 .box_mail::placeholder {
     color: rgb(0, 0, 0);
     text-align: center;
-    font-size: 40px;
+    font-size: 25px;
 }
 
 .box_password {
     background-color: rgb(255, 255, 255);
-    margin-top: 70px;
-    margin-left: 290px;
-    width: 450px;
-    height: 100px;
+    margin-top: 40px;
+    margin-left: 300px;
+    width: 250px;
+    height: 70px;
     border-radius: 90px;
     font-size: 35px;
     color: rgb(0, 0, 0);
@@ -64,15 +64,15 @@
 .box_password::placeholder {
     color: rgb(0, 0, 0);
     text-align: center;
-    font-size: 40px;
+    font-size: 25px;
 }
 
 .box_repassword {
     background-color: rgb(255, 255, 255);
-    margin-top: 70px;
-    margin-left: 290px;
-    width: 450px;
-    height: 100px;
+    margin-top: 40px;
+    margin-left: 300px;
+    width: 250px;
+    height: 70px;
     border-radius: 90px;
     font-size: 35px;
     color: rgb(0, 0, 0);
@@ -83,16 +83,17 @@
 .box_repassword::placeholder {
     color: rgb(0, 0, 0);
     text-align: center;
-    font-size: 40px;
+    font-size: 25px;
 }
 
 .Bouton_inscription {
     background-color: rgb(255, 255, 255);
-    margin-top: 20px;
-    margin-left: 750px;
+    margin-top: 0px;
+    margin-left: 700px;
     width: 150px;
     height: 70px;
     border-radius: 90px;
-    font-size: 40px;
+    font-size: 20px;
     display: inline-block;
 }
+
