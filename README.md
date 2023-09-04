@@ -18,3 +18,6 @@ création des fichier php est conexion a la bdd le config . php serre asavoir si
 
 # jour 4 :
 j'ai ajouter un nouveau fichier js qui rend les icons clicable est j'ai ajouter sass est reorganiser tout les fichier j'ai pas fait beaucoup mais beaucoup de reorganisation de fichier 
+
+# jour 5 :
+ajout de la page profile est de quelque element qui permet de modifier le mail le nom est le mdp j'ai aussi commencer a ajouter du code permeter d'afficher son nom son mail est son temps d'utilisation est j'ai recommencer a rerendre responsive ma page depuis que je suis passer au scss est ajoute de nouveau fichier php mais pas de gros changements pour le moments 

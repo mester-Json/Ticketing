@@ -1,0 +1,330 @@
+body {
+  margin: 0;
+  background-image: url(/Ticketing/img/slanted-gradient.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box {
+  background-color: white;
+  opacity: 50%;
+  border-radius: 90px;
+  margin-top: 50px;
+  margin-left: 650px;
+  margin-bottom: 50px;
+  width: 750px;
+  height: 560px;
+  display: block;
+}
+
+.box_user {
+  background-color: white;
+  margin-top: 50px;
+  margin-left: 220px;
+  width: 250px;
+  height: 50px;
+  border-radius: 90px;
+  font-size: 35px;
+  color: black;
+  text-align: center;
+  display: inline-block;
+}
+
+.box_user::-moz-placeholder {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 20px;
+}
+
+.box_user::placeholder {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 20px;
+}
+
+.box_mail {
+  background-color: white;
+  margin-top: 50px;
+  margin-left: 220px;
+  width: 250px;
+  height: 50px;
+  border-radius: 90px;
+  font-size: 35px;
+  color: black;
+  text-align: center;
+  display: inline-block;
+}
+
+.box_mail::-moz-placeholder {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 20px;
+}
+
+.box_mail::placeholder {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 20px;
+}
+
+.box_password {
+  background-color: rgb(255, 255, 255);
+  margin-top: 50px;
+  margin-left: 220px;
+  width: 250px;
+  height: 50px;
+  border-radius: 90px;
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  display: inline-block;
+}
+
+.box_password::-moz-placeholder {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 20px;
+}
+
+.box_password::placeholder {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 20px;
+}
+
+.new_compte {
+  color: black;
+  margin-left: 50px;
+  font-size: 15px;
+  block-size: 0;
+  display: flex;
+}
+
+.Bouton_connexion {
+  background-color: rgb(255, 255, 255);
+  margin-top: 25px;
+  margin-left: 550px;
+  width: 150px;
+  height: 50px;
+  border-radius: 90px;
+  font-size: 20px;
+  display: inline-block;
+}
+
+/*.Error_User {
+    padding-top: 20px;
+    margin-left: 80px;
+    font-size: 25px;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    display: none;
+    display: inline-block;
+}
+
+.Error_Mail {
+    padding-top: 20px;
+    margin-left: 80px;
+    font-size: 25px;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    display: none;
+    display: inline-block;
+}
+
+.Error_Password {
+    padding-top: 20px;
+    margin-left: 80px;
+    font-size: 25px;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    display: none;
+    display: inline-block;
+}
+
+*/
+nav {
+  width: auto;
+  height: 150px;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid white;
+  display: flex;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  padding-top: 10px;
+  font-size: 50px;
+  padding-left: 45%;
+  box-sizing: 0;
+  display: flex;
+}
+
+footer {
+  width: auto;
+  height: 150px;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid white;
+  display: flex;
+}
+
+.Copy {
+  color: rgb(255, 255, 255);
+  padding-top: 10px;
+  font-size: 30px;
+  padding-left: 40%;
+  display: flex;
+}
+
+@media screen and (max-width: 1572px) {
+  .box {
+    width: 500px;
+    margin-left: 25%;
+    height: 450px;
+  }
+  .box_user {
+    background-color: rgb(255, 255, 255);
+    margin-top: 80px;
+    margin-left: 130px;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+  }
+  .box_mail {
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    margin-left: 130px;
+    width: 250px;
+    height: 50px;
+    border-radius: 90px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+  }
+  .box_password {
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    margin-left: 130px;
+    width: 250px;
+    height: 50px;
+    border-radius: 90px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+  }
+  .Bouton_connexion {
+    margin-top: 30px;
+    margin-left: 330px;
+    width: 150px;
+    height: 30px;
+    font-size: 19px;
+    border-radius: 90px;
+  }
+  footer {
+    width: auto;
+    height: 95px;
+    bottom: 0%;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid white;
+    display: flex;
+  }
+  .Copy {
+    color: rgb(255, 255, 255);
+    padding-top: 10px;
+    font-size: 30px;
+    padding-left: 40%;
+    display: flex;
+  }
+}
+@media screen and (max-width: 700px) {
+  nav {
+    width: auto;
+    height: 100px;
+  }
+  h1 {
+    font-size: 25px;
+    padding-left: 35%;
+  }
+  .box {
+    width: 80px;
+    height: 250px;
+    border-radius: 30px;
+    margin-left: 40px;
+    display: block;
+  }
+  .box_user {
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    border-radius: 90px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+  }
+  .box_user::-moz-placeholder {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 15px;
+  }
+  .box_user::placeholder {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 15px;
+  }
+  .box_mail {
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    border-radius: 90px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+  }
+  .box_mail::-moz-placeholder {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 15px;
+  }
+  .box_mail::placeholder {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 15px;
+  }
+  .box_password {
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    border-radius: 90px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+  }
+  .box_password::-moz-placeholder {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 15px;
+  }
+  .box_password::placeholder {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 15px;
+  }
+  .Bouton_connexion {
+    display: none;
+  }
+  footer {
+    width: auto;
+    height: 100px;
+  }
+  .Copy {
+    font-size: 19px;
+    padding-left: 25%;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -6,6 +6,8 @@ clickableIcons.forEach(icon => {
     });
 });
 
+<<<<<<< HEAD
+=======
 const clickableIcons2 = document.querySelectorAll(".clickable-icon2");
 
 clickableIcons2.forEach(icon => {
@@ -71,3 +73,4 @@ clickableIcons9.forEach(icon => {
     });
 });
 
+>>>>>>> e55fcdbd74d9c5a34687a5ff4ce512199acd3905

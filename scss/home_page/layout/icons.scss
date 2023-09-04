@@ -1,0 +1,20 @@
+
+.fa-1x,
+.fa-2x,
+.fa-3x {
+    display: flex;
+    font-size: 50px;
+    margin-top: 0px;
+    margin-right: 10px; /* Espace horizontal entre les icônes */
+}
+
+.fa-1x {
+    color: rgb(0, 0, 0);
+    margin-left: 0px;
+}
+
+.fa-2x,
+.fa-3x {
+    color: black;
+    margin-left: 0px;
+}

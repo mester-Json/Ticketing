@@ -1,0 +1,22 @@
+.box {
+    width: 1600px;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column; /* Changez la direction de disposition de row à column */
+}
+
+.box > div {
+    background-color: white;
+    opacity: 50%;
+    border-radius: 90px;
+    height: 500px;
+    margin: 10px 0; /* Marge verticale entre chaque partie */
+}
+
+.box > div:first-child {
+    margin-top: 0; /* Pas de marge en haut pour le premier élément */
+}
+
+.box > div:last-child {
+    margin-bottom: 0; /* Pas de marge en bas pour le dernier élément */
+}
