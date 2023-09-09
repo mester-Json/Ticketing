@@ -1,9 +1,11 @@
 <?php 
     include'./php/config.php';
 
+
     try {
-        $db = new PDO("mysql:host=" . HOST . ";dbname=" . DB_Name, USER, PASS);
+        $db = new PDO("mysql:host". HOST . ";dbname" . DB_Name,  USER, PASS );
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
 
         $user = $_POST["User"];
         $mail = $_POST["Mail"];
@@ -41,8 +43,9 @@
             }
         }
     } catch (PDOException $e) {
-        die("Erreur de connexion à la base de données : " . $e->getMessage());
+        echo $e;
     }
+
 
 ?>
 

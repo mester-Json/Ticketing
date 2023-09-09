@@ -1,124 +1,86 @@
 <?php
+session_start(); // Assurez-vous que la session est démarrée
+
 include './php/config.php';
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $user_id = $_SESSION['user_id']; // Récupérez l'ID de l'utilisateur connecté depuis la session
+    $ticket_name = $_POST['titre'];
+    $ticket_description = $_POST['description'];
 
-try {
-    $db = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Erreur de connexion à la base de données : " . $e->getMessage());
+    // Insérez les données dans la table 'ticket' avec l'ID de l'utilisateur
+    $sql = "INSERT INTO ticket (ticket_name, ticket_description) VALUES (:titre, :description)";
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(':titre', $ticket_name);
+    $stmt->bindParam(':description', $ticket_description);
+
+    if ($stmt->execute()) {
+        // Redirigez l'utilisateur vers la même page pour afficher les tickets mis à jour
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit();
+    } else {
+        echo "Une erreur s'est produite lors de l'ajout du ticket.";
+    }
 }
 
-$confirmation_message = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $ticketName = $_POST["ticket_name"];
-    $ticketDescription = $_POST["ticket_description"];
-
-    $insertQuery = "INSERT INTO tickets (name, description) VALUES (?, ?)";
-    $insertStatement = $db->prepare($insertQuery);
-    $insertStatement->execute([$ticketName, $ticketDescription]);
-
-    $confirmation_message = "Votre ticket a été soumis avec succès.";
-}
-
-// Récupérer la liste des tickets depuis la base de données
-$selectQuery = "SELECT id, name, description FROM tickets";
-$statement = $db->query($selectQuery);
-$tickets = $statement->fetchAll(PDO::FETCH_ASSOC);
+// Requête SQL pour récupérer tous les tickets (y compris le nouveau si ajouté)
+$sql = "SELECT * FROM ticket ORDER BY id DESC"; // Remplacez 'ticket_id' par le nom de votre colonne d'ID de ticket
+$stmt = $db->prepare($sql);
+$stmt->execute();
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./scss/home_page/main.css">
-    <title>Acceuile</title>
+    <link rel="stylesheet" href="./scss/home_page/base.css">
+    <link rel="stylesheet" href="./scss/home_page/layout/box.css">
+    <link rel="stylesheet" href="./scss/home_page/layout/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Accueil</title>
 </head>
 
 <body>
     <nav>
         <h1> Ticketing </h1>
         <a href="./profile.html"><i class="fa-regular fa-user"></i></a>
-        <i class="fa-solid fa-plus"></i>
+        <i class="fa-solid fa-plus" onclick="openModal()"></i>
+        <div id="ticketModal" class="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span> 
+                <h2>Envoyer un ticket</h2>
+                <form action="home_page.php" method="post">
+                    <input type="text" name="titre" placeholder="Titre du ticket" required>
+                    <textarea name="description" placeholder="Description du ticket" required></textarea>
+                    <input type="submit" value="Envoyer">
+                </form>
+            </div>
+        </div>
     </nav>
     <div class="box">
         <div>
-            <span class="fa-regular fa-flag clickable-icon "></span>
-            <span class="fa-regular fa-flag clickable-icon "></span>
-            <span class="fa-regular fa-flag clickable-icon "></span>
-            <span class="fa-regular fa-flag clickable-icon "></span>
-            <span class="fa-regular fa-flag clickable-icon "></span>
-
-        </div>
-        <div>
-            <span class="fa-regular fa-bookmark  clickable-icon "></span>
-            <span class="fa-regular fa-bookmark  clickable-icon "></span>
-            <span class="fa-regular fa-bookmark  clickable-icon "></span>
-            <span class="fa-regular fa-bookmark  clickable-icon "></span>
-            <span class="fa-regular fa-bookmark  clickable-icon "></span>
-        </div>
-        <div>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
-        </div>
-    </div>
-    <div class="box">
-        <div>
-            <span class="fa-regular fa-flag  clickable-icon "></span>
-            <span class="fa-regular fa-flag  clickable-icon "></span>
-            <span class="fa-regular fa-flag  clickable-icon "></span>
-            <span class="fa-regular fa-flag  clickable-icon "></span>
-            <span class="fa-regular fa-flag  clickable-icon "></span>
-        </div>
-        <div>
-            <span class="fa-regular fa-bookmark clickable-icon "></span>
-            <span class="fa-regular fa-bookmark clickable-icon "></span>
-            <span class="fa-regular fa-bookmark clickable-icon "></span>
-            <span class="fa-regular fa-bookmark clickable-icon "></span>
-            <span class="fa-regular fa-bookmark clickable-icon "></span>
-        </div>
-        <div>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
-        </div>
-    </div>
-    <div class="box">
-        <div>
-            <span class="fa-regular fa-flag clickable-icon "></span>
-            <span class="fa-regular fa-flag clickable-icon "></span>
-            <span class="fa-regular fa-flag clickable-icon "></span>
-            <span class="fa-regular fa-flag clickable-icon "></span>
-            <span class="fa-regular fa-flag clickable-icon "></span>
-        </div>
-        <div>
-            <span class="fa-regular fa-bookmark clickable-icon "></span>
-            <span class="fa-regular fa-bookmark clickable-icon "></span>
-            <span class="fa-regular fa-bookmark clickable-icon "></span>
-            <span class="fa-regular fa-bookmark clickable-icon "></span>
-            <span class="fa-regular fa-bookmark clickable-icon "></span>
-        </div>
-        <div>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
-            <span class="fa-regular fa-thumbs-up clickable-icon "></span>
+            <?php
+            if ($stmt->rowCount() > 0) {
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    echo '<div class="ticket">';
+                    echo '<h2>' . $row['ticket_name'] . '</h2>';
+                    echo '<p>' . $row['ticket_description'] . '</p>';
+                    // ... Affichez d'autres détails du ticket selon votre structure de base de données
+                    echo '</div>';
+                }
+            } else {
+                echo 'Aucun ticket trouvé.';
+            }
+            ?>
         </div>
     </div>
     <footer>
         <p class="Copy">Jayson-Decubber-2023</p>
     </footer>
 </body>
-<script src="./js/clik_icons.js"></script>
+<script src="./js/click_icons.js"></script>
+<script src="./js/modal.js"></script>
 
 </html>

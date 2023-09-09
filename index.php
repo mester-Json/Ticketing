@@ -1,6 +1,6 @@
 <?php 
-    include'./php/config.php';
-
+    include './php/config.php';
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $db = new PDO("mysql:host=" . HOST . ";dbname=" . DB_Name, USER, PASS);
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -17,16 +17,17 @@
         $requete->execute();
 
         if ($requete->fetch()) {
-            header("Location: ./home_page.html");
+            header("Location: home_page.php");
             exit;
         } else {
-            $error_message = "Nom d'utilisateur ou mot de passe incorrect.";
+            echo "Nom d'utilisateur ou mot de passe incorrect.";
         }
     } catch (PDOException $e){
-        $error_message = "Erreur de connexion à la base de données : " . $e->getMessage();
+        die("Erreur de connexion à la base de données : " . $e->getMessage());
     }
-
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +62,7 @@
         <div>
             <input type="submit" name="" class="Bouton_connexion " value="submit">
         </div>
-        <a class="new_compte" href="http://localhost/Ticketing/inscription.html">
+        <a class="new_compte" href="http://localhost/Ticketing/inscription.php">
             <p> Crée un compte </p>
         </a>
         <?php

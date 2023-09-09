@@ -1,22 +1,30 @@
 .box {
-    width: 1600px;
-    margin-left: 150px;
-    display: flex;
-    flex-direction: column; /* Changez la direction de disposition de row à column */
-}
-
-.box > div {
-    background-color: white;
+    /* Autres styles pour la boîte... */
+    background-color: rgb(255, 255, 255);
     opacity: 50%;
-    border-radius: 90px;
-    height: 500px;
-    margin: 10px 0; /* Marge verticale entre chaque partie */
+    overflow-y: scroll; /* Ajoute une barre de défilement verticale si nécessaire */
+    margin-top: 50px;
+    margin-left: 500px;
+    max-width: 1000px;
+    margin-bottom: 50px;
+    max-height: 650px; /* Définissez la hauteur maximale pour afficher 6 tickets */
 }
 
-.box > div:first-child {
-    margin-top: 0; /* Pas de marge en haut pour le premier élément */
+.ticket {
+    /* Styles pour chaque ticket... */
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10px; /* Espace entre chaque ticket */
+    padding: 18px; /* Espace à l'intérieur du ticket */
+    font-size: 14px; /* Taille de police pour le ticket */
 }
 
-.box > div:last-child {
-    margin-bottom: 0; /* Pas de marge en bas pour le dernier élément */
+.ticket h2 {
+    font-size: 16px; /* Taille de police pour le titre du ticket */
+    margin-bottom: 6px; /* Espace sous le titre */
+}
+
+.ticket p {
+    margin: 0; /* Suppression de la marge inférieure pour éviter un espace supplémentaire sous le texte */
+    font-size: 14px; /* Taille de police pour le contenu du ticket */
+    line-height: 1.4; /* Espacement des lignes */
 }
