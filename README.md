@@ -22,5 +22,5 @@ j'ai ajouter un nouveau fichier js qui rend les icons clicable est j'ai ajouter 
 # jour 5 :
 ajout de la page profile est de quelque element qui permet de modifier le mail le nom est le mdp j'ai aussi commencer a ajouter du code permeter d'afficher son nom son mail est son temps d'utilisation est j'ai recommencer a rerendre responsive ma page depuis que je suis passer au scss est ajoute de nouveau fichier php mais pas de gros changements pour le moments 
 
-#jour 6 :
+# jour 6 :
 Grosse mise a jour rajouter des affichage des ticket est de pouvoir crée des ticket chaque ticket est link a son user est rjout du fichier sql de la bdd ajout aussi d'u, fichier js pour la modal quelque complication mais tout marche
