@@ -1,20 +1,24 @@
-
-.fa-1x,
-.fa-2x,
-.fa-3x {
+/* Style des icônes */
+.icons {
     display: flex;
-    font-size: 50px;
-    margin-top: 0px;
-    margin-right: 10px; /* Espace horizontal entre les icônes */
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
-.fa-1x {
-    color: rgb(0, 0, 0);
-    margin-left: 0px;
+/* Style de l'icône de drapeau */
+.fas.fa-flag {
+    color: #ff9900; /* Couleur orange */
+    cursor: pointer;
 }
 
-.fa-2x,
-.fa-3x {
-    color: black;
-    margin-left: 0px;
+/* Style de l'icône de signet */
+.fas.fa-bookmark {
+    color: #3366cc; /* Couleur bleue */
+    cursor: pointer;
+}
+
+/* Style de l'icône de cœur */
+.fas.fa-heart {
+    color: #ff0000; /* Couleur rouge */
+    cursor: pointer;
 }

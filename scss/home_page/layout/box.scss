@@ -1,18 +1,18 @@
 .box {
     /* Autres styles pour la boîte... */
-    background-color: rgb(255, 255, 255);
-    opacity: 50%;
+    background-color: white;
     overflow-y: scroll; /* Ajoute une barre de défilement verticale si nécessaire */
     margin-top: 50px;
     margin-left: 500px;
     max-width: 1000px;
     margin-bottom: 50px;
+    border-radius: 0%;
     max-height: 650px; /* Définissez la hauteur maximale pour afficher 6 tickets */
 }
 
 .ticket {
     /* Styles pour chaque ticket... */
-    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
     margin-bottom: 10px; /* Espace entre chaque ticket */
     padding: 18px; /* Espace à l'intérieur du ticket */
     font-size: 14px; /* Taille de police pour le ticket */

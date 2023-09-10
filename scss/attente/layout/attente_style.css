@@ -1,25 +1,32 @@
-h2 {
-  background-color: rgba(255, 255, 255, 0.548);
-  margin-left: 950px;
-  padding-top: 20px;
-  padding-left: 150px;
-  width: 500px;
-  height: 90px;
-  color: rgb(0, 0, 0);
-  font-size: 50px;
-  border-radius: 90px;
-  display: flex;
+@charset "UTF-8";
+.box {
+  /* Autres styles pour la boîte... */
+  background-color: white;
+  overflow-y: scroll; /* Ajoute une barre de défilement verticale si nécessaire */
+  margin-top: 50px;
+  margin-left: 500px;
+  max-width: 1000px;
+  margin-bottom: 50px;
+  border-radius: 0%;
+  max-height: 650px;
+  margin-bottom: 200px; /* Définissez la hauteur maximale pour afficher 6 tickets */
 }
 
-.box {
-  background-color: white;
-  opacity: 50%;
-  border-radius: 90px;
-  margin-top: 170px;
-  margin-bottom: 50px;
-  margin-left: 150px;
-  width: 2250px;
-  height: 1000px;
-  display: flex;
-  flex-direction: row;
+.ticket {
+  /* Styles pour chaque ticket... */
+  border: 2px solid black;
+  margin-bottom: 10px; /* Espace entre chaque ticket */
+  padding: 18px; /* Espace à l'intérieur du ticket */
+  font-size: 14px; /* Taille de police pour le ticket */
+}
+
+.ticket h3 {
+  font-size: 16px; /* Taille de police pour le titre du ticket */
+  margin-bottom: 6px; /* Espace sous le titre */
+}
+
+.ticket p {
+  margin: 0; /* Suppression de la marge inférieure pour éviter un espace supplémentaire sous le texte */
+  font-size: 14px; /* Taille de police pour le contenu du ticket */
+  line-height: 1.4; /* Espacement des lignes */
 }/*# sourceMappingURL=attente_style.css.map */

@@ -3,6 +3,7 @@ nav {
     height: 150px;
     background-color: rgb(0, 0, 0);
     border: 2px solid white;
+    pointer-events: none;
     display: flex;
 }
 
@@ -10,16 +11,52 @@ h1 {
     color: rgb(255, 255, 255);
     padding-top: 10px;
     font-size: 50px;
-    padding-left: 45%;
-    box-sizing: 0;
+    padding-left: 5%;
+    display: flex;
+}
+
+.home {
+    color: rgb(255, 255, 255);
+    margin-left:400px;
+    font-size: 20px;
+    margin-top: 50px;
+    pointer-events: auto;
+    display: flex;
+}
+
+.attente {
+    color: rgb(255, 255, 255);
+    margin-left: 50px;
+    font-size: 20px;
+    margin-top: 50px;
+    pointer-events: auto;
+    display: flex;
+}
+
+.archive {
+    color: rgb(255, 255, 255);
+    margin-left: 50px;
+    font-size: 20px;
+    margin-top: 50px;
+    pointer-events: auto;
+    display: flex;
+}
+
+.terminer {
+    color: rgb(255, 255, 255);
+    margin-left: 50px;
+    font-size: 20px;
+    margin-top: 50px;
+    pointer-events: auto;
     display: flex;
 }
 
 .fa-user {
     color: rgb(255, 255, 255);
-    margin-left: 600px;
+    margin-left: 590px;
     font-size: 50px;
     margin-top: 50px;
+    pointer-events: auto;
     display: flex;
 }
 
@@ -28,6 +65,7 @@ h1 {
     margin-left: 50px;
     font-size: 50px;
     margin-top: 50px;
+    pointer-events: auto;
     display: flex;
 }
 
