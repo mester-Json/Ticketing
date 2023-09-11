@@ -1,8 +1,8 @@
 <?php
 define('HOST', 'localhost');
-define('DB_Name', 'ticketing');
-define('USER', 'root');
-define('PASS', '157326');
+define('DB_Name', '');
+define('USER', '');
+define('PASS', '');
 
 try {
     $db = new PDO("mysql:host=" . HOST . ";dbname=" . DB_Name, USER, PASS);
